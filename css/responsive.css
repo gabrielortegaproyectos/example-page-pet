@@ -1,0 +1,448 @@
+/* Responsive Design */
+
+/* Mobile First Approach */
+
+/* Small screens (480px and up) */
+@media (min-width: 480px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Medium screens (640px and up) */
+@media (min-width: 640px) {
+    .container {
+        padding: 0 var(--space-6);
+    }
+    
+    .hero-content {
+        padding: 0 var(--space-8);
+    }
+    
+    .title-line {
+        font-size: var(--fs-3xl);
+    }
+    
+    .title-highlight {
+        font-size: var(--fs-7xl);
+    }
+    
+    .hero-description {
+        font-size: var(--fs-xl);
+    }
+    
+    .section-title {
+        font-size: var(--fs-4xl);
+    }
+    
+    .about-stats {
+        padding: var(--space-6);
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .blog-card.featured {
+        grid-column: 1 / -1;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens (768px and up) */
+@media (min-width: 768px) {
+    .nav-container {
+        padding: var(--space-4) var(--space-8);
+    }
+    
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding: 0 var(--space-10);
+    }
+    
+    .section-title {
+        font-size: var(--fs-5xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--fs-xl);
+    }
+    
+    .about-img {
+        height: 450px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .blog-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .blog-card.featured {
+        grid-row: 1 / 3;
+        grid-column: 1;
+    }
+    
+    .contact-form {
+        padding: var(--space-10);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+/* Extra large screens (1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--space-8);
+    }
+    
+    .nav-menu {
+        position: static;
+        height: auto;
+        background: transparent;
+        flex-direction: row;
+        padding-top: 0;
+        gap: var(--space-8);
+        box-shadow: none;
+        transform: none;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-20);
+        padding: 0 var(--space-12);
+    }
+    
+    .hero-text {
+        text-align: left;
+    }
+    
+    .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .hero-image {
+        order: 0;
+        justify-content: flex-end;
+    }
+    
+    .title-highlight {
+        font-size: var(--fs-8xl);
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-20);
+    }
+    
+    .about-img {
+        height: 500px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .blog-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-20);
+    }
+}
+
+/* XXL screens (1280px and up) */
+@media (min-width: 1280px) {
+    .hero-content {
+        padding: 0 var(--space-16);
+    }
+    
+    .title-highlight {
+        font-size: var(--fs-9xl);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .about-img {
+        height: 550px;
+    }
+}
+
+/* 2XL screens (1536px and up) */
+@media (min-width: 1536px) {
+    .hero-content {
+        padding: 0 var(--space-20);
+    }
+    
+    .container {
+        max-width: var(--container-2xl);
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-img,
+    .about-img,
+    .portfolio-item img,
+    .blog-card img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 1023px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        gap: var(--space-12);
+    }
+    
+    .hero-img {
+        height: 300px;
+    }
+    
+    .about-img {
+        height: 300px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .hero-video,
+    .scroll-indicator,
+    .back-to-top,
+    .loading-screen,
+    .portfolio-filters,
+    .contact-form {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding-top: 0;
+    }
+    
+    .hero-background {
+        display: none;
+    }
+    
+    .section-header {
+        break-after: avoid;
+    }
+    
+    .portfolio-item,
+    .blog-card {
+        break-inside: avoid;
+    }
+    
+    .footer {
+        background: transparent;
+        color: var(--text-primary);
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: smaller;
+    }
+    
+    .nav-link::after,
+    .social-link::after,
+    .blog-read-more::after {
+        content: none;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-video {
+        display: none;
+    }
+    
+    .image-decoration {
+        animation: none;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+    
+    .paw-loader {
+        animation: none;
+    }
+    
+    .title-highlight {
+        animation: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f0f0f0;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --border-primary: #000000;
+        --accent-primary: #0066cc;
+    }
+    
+    .btn-primary {
+        background: #000000;
+        border-color: #000000;
+    }
+    
+    .btn-secondary,
+    .btn-outline {
+        border-color: #000000;
+        color: #000000;
+    }
+    
+    .navbar {
+        background: #ffffff;
+        border-bottom-color: #000000;
+    }
+    
+    .portfolio-overlay,
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        padding: var(--space-4) var(--space-6);
+    }
+    
+    .nav-link {
+        padding: var(--space-3) var(--space-4);
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .filter-btn {
+        min-height: 44px;
+        padding: var(--space-3) var(--space-5);
+    }
+    
+    input,
+    textarea,
+    select {
+        min-height: 44px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    /* Remove hover effects on touch devices */
+    .card:hover,
+    .portfolio-item:hover,
+    .blog-card:hover,
+    .btn:hover {
+        transform: none;
+    }
+    
+    .portfolio-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Large touch targets for accessibility */
+@media (pointer: coarse) {
+    .back-to-top {
+        width: 56px;
+        height: 56px;
+        bottom: var(--space-8);
+        right: var(--space-8);
+    }
+    
+    .nav-toggle {
+        padding: var(--space-3);
+    }
+}
+
+/* Retina/High DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+    
+    .logo-img,
+    .footer-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: rgba(17, 24, 39, 0.95);
+        border-bottom-color: var(--gray-700);
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+    }
+    
+    .about-stats {
+        background: rgba(31, 41, 55, 0.95);
+    }
+    
+    .contact-form {
+        background: var(--gray-800);
+    }
+    
+    .card,
+    .blog-card {
+        background: var(--gray-800);
+        border-color: var(--gray-700);
+    }
+}

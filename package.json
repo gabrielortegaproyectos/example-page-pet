@@ -1,0 +1,55 @@
+{
+  "name": "pantufla-website",
+  "version": "1.0.0",
+  "description": "Sitio web profesional para Pantufla, modelo felina profesional disponible para comerciales en Europa",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 || php -S localhost:8000 || npx serve .",
+    "dev": "npx live-server --port=8000",
+    "build": "echo 'No build process required for vanilla HTML/CSS/JS'",
+    "test": "echo 'No tests specified'",
+    "validate": "npx html-validate index.html",
+    "optimize": "npx imagemin images/* --out-dir=images/optimized"
+  },
+  "keywords": [
+    "cat-model",
+    "professional-portfolio",
+    "model-website",
+    "pantufla",
+    "commercial-cat",
+    "europe",
+    "pet-model",
+    "responsive-design",
+    "modern-website",
+    "professional-cat"
+  ],
+  "author": {
+    "name": "Pantufla Development Team",
+    "email": "dev@pantufla-model.com",
+    "url": "https://pantufla-model.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pantufla/professional-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pantufla/professional-website/issues"
+  },
+  "homepage": "https://pantufla-model.com",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-validate": "^8.7.4",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
